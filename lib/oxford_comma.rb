@@ -4,7 +4,10 @@ def oxford_comma(array)
       return array.first
     when 2
       return "#{array.first} and #{array.last}"
-    when 3
-      return "#{array.first}, #{array[1]}, and #{array.last}"
+    else
+      str = ""
+      array.each do |ele|
+        ele == array.last ? str << "and #{ele}" : str << "#{ele}, "
+      end
   end
 end
