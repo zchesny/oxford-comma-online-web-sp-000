@@ -9,5 +9,6 @@ def oxford_comma(array)
       array.each do |ele|
         ele == array.last ? str << "and #{ele}" : str << "#{ele}, "
       end
+      return str
   end
 end
